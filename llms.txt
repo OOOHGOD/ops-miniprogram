@@ -1,0 +1,42 @@
+# 物业运营小程序一期 · AI 知识包
+
+> 主体：佛山市希铭物业有限公司 · 金峰兆业时尚产业社区。
+> 本仓库提供 PRD **V0.3.4**（回填稿，**非冻结稿**）及其全部依据台账，供 AI Agent 检索、评审、生成代码与测试用例。
+> 最后整理：2026-11-25 ｜ 依据基线：《待调研清单》v37（2026-11-24 更新）。
+
+## 必读（按此顺序）
+
+- [01_SUMMARY.md](ai-context/01_SUMMARY.md)：约 10 KB 浓缩版。上下文有限时**先读这个**，再按任务深入。
+- [02_PRD.md](ai-context/02_PRD.md)：PRD V0.3.4 全文，**唯一真相源**，14 章 + 10 附录、93 条 FR、附录 A~J。
+- [AGENTS.md](AGENTS.md)：Agent 硬约定——哪些是现行依据、哪些禁止引用、哪些值不得写死。
+- [00_INDEX.md](ai-context/00_INDEX.md)：全量文件索引，含每份文件的 STATUS 与"何时该读"。
+
+## 结构化数据（可直接程序消费）
+
+- [requirements.json](ai-context/data/requirements.json)：31 条待调研项 + 16 行消防标准 + 18 条已答结论。
+- [fr_index.json](ai-context/data/fr_index.json)：FR-01~93 逐条索引（P0 54 / P1 31 / P2 8）。
+- [open_questions.json](ai-context/data/open_questions.json)：U1~U13 待确认项 + 建议默认值 + OPEN 状态。
+- [versions.json](ai-context/data/versions.json)：V0.2 → V0.3.4 版本链与各版在线文档 ID。
+
+## 派生知识（人工可读，便于快速定位）
+
+- [03_DECISIONS.md](ai-context/03_DECISIONS.md)：11 条已裁决 + 6 条仍存冲突 + 用户 U-D 决策 9 条。
+- [04_OPEN_QUESTIONS.md](ai-context/04_OPEN_QUESTIONS.md)：全部待确认项与硬规则。
+- [05_GLOSSARY.md](ai-context/05_GLOSSARY.md)：编号体系与易混淆术语（打卡/随手拍、日常巡查、双阈值…）。
+- [06_CHANGELOG.md](ai-context/06_CHANGELOG.md)：版本变更史与在线/本地版本差。
+- [07_EVIDENCE_MAP.md](ai-context/07_EVIDENCE_MAP.md)：依据台账导览，说明每条结论去哪份文件查证。
+
+## 依据台账（按需查阅，勿整体载入上下文）
+
+- [evidence/](ai-context/evidence/)：11 份原始依据全文。清单 v37、26 条纪要交叉印证 + 63 条依据、14 份规范文档解析、38 条遗漏审计、GB 国标逐行对照、P0 建模、backlog 流程、大型设施台账、应急预案转写。
+
+## 单文件版
+
+- [AI_CONTEXT.md](AI_CONTEXT.md)：自包含单文件，整合索引 + 摘要 + 决策 + 待确认 + 术语，适合一次读入。
+
+## 已废弃 / 禁止作为现行需求依据
+
+- `PRD_物业小程序一期_V0.2_调研回填稿_2026-11-20.md`（V0.2，已归档、不入库）。
+- `ai-context/evidence/11_交付说明_V0.2_历史.md`（V0.2 交付说明，仅供追溯版本史）。
+- 2026-10 采购立项阶段的旧 md/docx（已归档，不入库）。
+- 在线资料库最新版本为 **V0.3.3**；**V0.3.4 仅存在于本仓库**，两者冲突时以本仓库 `02_PRD.md` 为准。

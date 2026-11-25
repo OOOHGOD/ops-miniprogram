@@ -1,0 +1,51 @@
+{
+  "active_version": "V0.3.4",
+  "active_file": "ai-context/02_PRD.md",
+  "human_mirror": "PRD_物业小程序一期_V0.3_2026-11-24.md",
+  "status": "回填稿，非冻结稿",
+  "chain": [
+    {
+      "v": "V0.2",
+      "date": "2026-11-20",
+      "online": "lDD6W3vmOflhdqRgcRdn04",
+      "note": "初始回填稿，状态机/数值/角色三块空白"
+    },
+    {
+      "v": "V0.2.1",
+      "date": "2026-11-20",
+      "online": "lDD6W3vmOflhdqRgcRdn04",
+      "note": "统计口径校正 17/17/4；MI-xx 重编号"
+    },
+    {
+      "v": "V0.3",
+      "date": "2026-11-24",
+      "online": "Hs5genPSY4ZvKxlJbgQwCr",
+      "note": "补齐三类 P0、找到一手消防原件、4 个 backlog 流程"
+    },
+    {
+      "v": "V0.3.1",
+      "date": "2026-11-24",
+      "online": "9yfqdlxqYb1SmovE63UpOO",
+      "note": "身份与登录模型 U-D1~U-D5，§4.8、FR-61~66、附录 F"
+    },
+    {
+      "v": "V0.3.2",
+      "date": "2026-11-24",
+      "online": "gUL9ru2gxW5ZljCAkaagH4",
+      "note": "邓令升身份勘误 U-D6，R3 归 L2"
+    },
+    {
+      "v": "V0.3.3",
+      "date": "2026-11-24",
+      "online": "sTPpmvwNkeCZCxpWNtBoI9",
+      "note": "巡查二维分类 U-D7、消防四子域、G1~G9 设施台账、FR-67~73"
+    },
+    {
+      "v": "V0.3.4",
+      "date": "2026-11-24",
+      "online": null,
+      "note": "打卡分期/图片规格/问题上报分级；FR-74~93；仅本地，未同步在线"
+    }
+  ],
+  "note": "在线版最新为 V0.3.3；V0.3.4 以本仓库 02_PRD.md 为准。"
+}

@@ -2,7 +2,9 @@
 .workbuddy/
 
 # 第三方参考源码与历史归档（不入库）
+# 旧资料已于 2026-11-25 统一移入 _archive/，见 _archive/README.md
 _ref/
+_archive/
 _archive_v4/
 _pack/
 _归档_已过时_2026-10-30/

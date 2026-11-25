@@ -1,0 +1,10 @@
+# 统一行尾，保证 PRD 双份文件 sha256 一致（scripts/verify_ai_context.py 会校验）
+* text=auto eol=lf
+
+# 二进制
+*.docx binary
+*.xlsx binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
