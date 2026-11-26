@@ -14,7 +14,7 @@
 ## 结构化数据（可直接程序消费）
 
 - [requirements.json](ai-context/data/requirements.json)：31 条待调研项 + 16 行消防标准 + 18 条已答结论。
-- [fr_index.json](ai-context/data/fr_index.json)：FR-01~93 逐条索引（P0 54 / P1 31 / P2 8）。
+- [fr_index.json](ai-context/data/fr_index.json)：FR-01~93 逐条索引（P0 51 / P1 34 / P2 8）。
 - [open_questions.json](ai-context/data/open_questions.json)：U1~U13 待确认项 + 建议默认值 + OPEN 状态。
 - [versions.json](ai-context/data/versions.json)：V0.2 → V0.3.4 版本链与各版在线文档 ID。
 
