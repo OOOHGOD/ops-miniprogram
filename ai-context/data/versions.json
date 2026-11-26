@@ -1,5 +1,5 @@
 {
-  "active_version": "V0.3.4",
+  "active_version": "V0.4",
   "active_file": "ai-context/02_PRD.md",
   "human_mirror": "PRD_物业小程序一期_V0.3_2026-11-24.md",
   "status": "回填稿，非冻结稿",
@@ -45,10 +45,16 @@
       "date": "2026-11-24",
       "online": null,
       "note": "打卡分期/图片规格/问题上报分级；FR-74~93；仅本地，未同步在线；2026-11-25 修订 1 一致性勘误（业务内容未变）"
+    },
+    {
+      "v": "V0.4",
+      "date": "2026-11-26",
+      "online": null,
+      "note": "B 档交付契约补齐：§5.10 51 条 P0 验收点、附录 K（RTM/埋点/异常/合规/页面/依赖/催办）、§4 导航框；FR 93 条与业务规则未变"
     }
   ],
-  "note": "在线版最新为 V0.3.3；V0.3.4 以本仓库 02_PRD.md 为准。",
-  "revision": 1,
-  "revision_date": "2026-11-25",
-  "revision_note": "A 档一致性勘误：FR 优先级统计、表格列数、标题层级、重复分隔线、文档信息表与条件性声明；业务内容与 FR 条目未变，不升版本号。"
+  "note": "在线版最新为 V0.3.3；V0.4 以本仓库 02_PRD.md 为准。",
+  "revision": 0,
+  "revision_date": "2026-11-26",
+  "revision_note": "V0.4 为新版本，暂无修订；V0.3.4 修订 1 的留痕见 06_CHANGELOG.md §2.1。"
 }

@@ -1,6 +1,6 @@
 {
   "source": "02_PRD.md",
-  "version": "V0.3.4",
+  "version": "V0.4",
   "count": 13,
   "rule": "凡 status=OPEN 的条目不得写死进代码；default_value 仅为本文建议值",
   "items": [

@@ -1,7 +1,7 @@
 # 00_INDEX.md · AI 资料包全量索引
 
 > STATUS 说明：`ACTIVE` = 现行依据 ｜ `EVIDENCE` = 原始依据（只读查证）｜ `DERIVED` = 由 ACTIVE 派生的导航/摘要 ｜ `DEPRECATED` = 历史，仅供追溯，**禁止作为现行需求**。
-> 所有相对路径以仓库根目录为基准。最后整理：2026-11-25。
+> 所有相对路径以仓库根目录为基准。最后整理：2026-11-26。
 
 ## 入口层（仓库根）
 
@@ -11,19 +11,20 @@
 | `AGENTS.md` | DERIVED | 硬约定：真相源、禁写死规则、编号体系、安全红线 | 写代码 / 改 PRD 前必读 |
 | `README.md` | DERIVED | 项目总览（人 + AI 双读） | 快速了解项目 |
 | `AI_CONTEXT.md` | DERIVED | 单文件自包含版 | 上下文受限、只能读一个文件时 |
-| `PRD_物业小程序一期_V0.3_2026-11-24.md` | ACTIVE | PRD V0.3.4 人工面板镜像（与 `02_PRD.md` 字节一致） | 人在面板里审文档 |
+| `PRD_物业小程序一期_V0.3_2026-11-24.md` | ACTIVE | PRD V0.4 人工面板镜像（与 `02_PRD.md` 字节一致，文件名沿用） | 人在面板里审文档 |
 
 ## 核心层（`ai-context/`）
 
 | 文件 | STATUS | 用途 | 何时读 |
 |---|---|---|---|
 | `01_SUMMARY.md` | DERIVED | 约 10 KB 浓缩版：范围、模型、决策、约束、待确认 | **先读这个**，再按任务深入 |
-| `02_PRD.md` | **ACTIVE · 唯一真相源** | PRD V0.3.4 全文（修订 1 一致性勘误），14 章 + 附录 A~J、FR-01~93 | 需要章节细节、字段、状态机、验收口径时 |
+| `02_PRD.md` | **ACTIVE · 唯一真相源** | PRD **V0.4** 全文，14 章 + 附录 A~K、FR-01~93、§5.10 51 条 P0 验收点 | 需要章节细节、字段、状态机、验收口径时 |
 | `03_DECISIONS.md` | DERIVED | 11 条已裁决 + 6 条仍存冲突 + 用户 U-D 决策 9 条 | 判断「某结论是否已拍板」 |
 | `04_OPEN_QUESTIONS.md` | DERIVED | 全部待确认项与硬规则 | 编码前确认哪些值不能写死 |
 | `05_GLOSSARY.md` | DERIVED | 编号体系 + 术语消歧 + 角色 + 枚举 | 遇到 `L-/AC-/FR-` 等编号或术语歧义 |
-| `06_CHANGELOG.md` | DERIVED | V0.2 → V0.3.4 版本链、在线/本地版本差 | 追溯某结论是哪一版引入的 |
+| `06_CHANGELOG.md` | DERIVED | V0.2 → V0.4 版本链、在线/本地版本差 | 追溯某结论是哪一版引入的 |
 | `07_EVIDENCE_MAP.md` | DERIVED | 依据台账导览：每条结论去哪查证 | 需要「有依据来源」的证明链 |
+| `08_DELIVERY_CONTRACT.md` | DERIVED | **V0.4 交付契约速查**：51 条 P0 验收点 / RTM / 埋点 / 12 类异常 / 合规 8 项 / 6 页 / 依赖三档 / 催办表 | 写测试用例、评估「能否开工」时 |
 
 ## 结构化数据（`ai-context/data/`）
 
@@ -32,7 +33,7 @@
 | `requirements.json` | EVIDENCE | `items` 31 条待调研项、`standards` 16 行消防标准、`answered` 18 条已答 | JSON.parse，按 `id` / `item` 索引 |
 | `fr_index.json` | DERIVED | FR-01~93 逐条索引（含原始表格行 `raw`） | 按 `id` 查功能需求，回 `02_PRD.md §5` 看全文 |
 | `open_questions.json` | DERIVED | `U1`~`U13`，含 `question` / `impact` / `default_value` / `status=OPEN` | **编码前过滤 OPEN 项**，禁止写死 |
-| `versions.json` | DERIVED | `active_version` + 7 个版本节点与在线文档 ID | 判断当前应引用哪一版 |
+| `versions.json` | DERIVED | `active_version` + 8 个版本节点与在线文档 ID | 判断当前应引用哪一版 |
 
 ## 依据台账（`ai-context/evidence/`）
 

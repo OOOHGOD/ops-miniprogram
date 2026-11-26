@@ -15,6 +15,7 @@ REQUIRED = [
     "ai-context/00_INDEX.md", "ai-context/01_SUMMARY.md", "ai-context/02_PRD.md",
     "ai-context/03_DECISIONS.md", "ai-context/04_OPEN_QUESTIONS.md",
     "ai-context/05_GLOSSARY.md", "ai-context/06_CHANGELOG.md", "ai-context/07_EVIDENCE_MAP.md",
+    "ai-context/08_DELIVERY_CONTRACT.md",
     "ai-context/data/requirements.json", "ai-context/data/fr_index.json",
     "ai-context/data/open_questions.json", "ai-context/data/versions.json",
 ]
@@ -77,6 +78,20 @@ for dp, _, fns in os.walk(AI):
 print("6) ai-context size: %.1f KB | evidence=%d | data=%d" % (
     total / 1024, len(list((AI / "evidence").glob("*.md"))), len(list((AI / "data").glob("*.json")))))
 
-ok = not missing and not bad and same and not leaks
+# ---------- 7. V0.4 交付契约层 ----------
+prd_txt = io.open(AI / "02_PRD.md", encoding="utf-8").read()
+contract = {
+    "§5.10 章节": prd_txt.count("### 5.10 ") == 1,
+    "附录 K": prd_txt.count("## 附录 K ") == 1,
+    "K.1~K.7": all(prd_txt.count("### K.%d " % i) == 1 for i in range(1, 8)),
+    "P0 验收点 51 行": len(re.findall(r"^\| `FR-\d{2}` \|.*\| `TC-\d{3}` \|$", prd_txt, flags=re.M)) == 51,
+    "RTM TC 编号": len(re.findall(r"`TC-\d{3}`", prd_txt)) >= 93,
+    "08 速查": (AI / "08_DELIVERY_CONTRACT.md").exists(),
+}
+print("7) V0.4 contract:", "PASS" if all(contract.values()) else "FAIL",
+      [k for k, ok in contract.items() if not ok] or "")
+assert all(contract.values())
+
+ok = not missing and not bad and same and not leaks and all(contract.values())
 print("\nRESULT:", "PASS" if ok else "FAIL")
 assert ok
